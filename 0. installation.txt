@@ -1,0 +1,8 @@
+npx nuxi init <p-name>
+
+npm install
+
+npm run dev
+
+
+extension: volar

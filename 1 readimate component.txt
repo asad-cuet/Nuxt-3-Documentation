@@ -1,0 +1,4 @@
+1. NuxtLink: instaed of </a>
+============
+
+    <NuxyLink to="/url">Button</NuxtLink>
