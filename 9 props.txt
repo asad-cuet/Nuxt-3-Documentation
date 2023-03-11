@@ -1,0 +1,7 @@
+send:
+====
+<ProductCard :product="value" /> 
+
+catch:
+======
+const {value}=defineProps(['product'])

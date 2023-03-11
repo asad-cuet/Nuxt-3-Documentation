@@ -1,0 +1,20 @@
+structure:
+==========
+filename.js:   [filename could be anything]
+
+    export const compName=()=> useState(()=>   //()=>- define as function,   useState-is a hook
+    []
+    )
+
+
+
+call from script:
+=================
+    const compData= compName()
+    console.log(compData.value)
+
+    pushing some data:
+    ------------------
+    compData.value.push({
+        name:'....'
+    })

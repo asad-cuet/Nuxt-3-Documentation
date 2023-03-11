@@ -1,0 +1,13 @@
+from assets:
+============
+src="/assets/images/...."
+route: base/assets/images/....
+
+
+from public:
+============
+-it needs for robots.txt file
+- case when you don't want assets in route use public directory
+
+src="/images/...."
+route: base/images/....

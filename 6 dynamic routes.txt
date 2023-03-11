@@ -1,0 +1,22 @@
+directory for dynamic royte:
+============================
+pages/
+     index.vue           [have no param]
+     users-[group]/      [add dynamic word after 'users-']
+     [id].vue            [have id param]
+
+
+access params in template:
+==========================
+{{$route.params.group}}
+{{$route.params.id}}
+
+
+access params in script:
+========================
+
+const route= useRoute()
+
+const group= route.params.group
+const group= route.params.group.replaceAll('-','')   //to replace hyphane
+const id= route.params.id

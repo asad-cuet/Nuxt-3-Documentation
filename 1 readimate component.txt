@@ -1,4 +1,22 @@
-1. NuxtLink: instaed of </a>
+1. To redirect: 
 ============
-
     <NuxyLink to="/url">Button</NuxtLink>
+
+    by script:
+    ---------
+    navigateTo('about')
+
+
+2. Head component to overwrite head data:
+=========================================
+    <Head>
+        <Title>Nuxt Dojo | {{ product.title }}</Title>
+        <Meta name="description" :content="product.description" />
+    </Head>
+
+    also can be do in script:
+    -------------------------
+    useHead({
+        title:"Products",
+        description:"...............",
+    })

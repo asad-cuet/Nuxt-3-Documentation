@@ -1,0 +1,34 @@
+Nuxt will find this layout and show pages instead of slot
+Directory:
+=========
+/layouts/
+    default.vue  
+
+
+<template>
+<div>
+    -----------------
+    -----------------
+    <slot></slot>
+
+</div>
+</templete>
+
+
+
+Mutupple Layouts:
+=================
+/layouts/
+    default.vue  
+
+    lay2.vue   [if you want to use more layouts, to use in specific pages, you can also do this.]
+                [how to set layout from pages: example
+                    <script setup>
+                        definePageMeta({
+                            layout:'lay2'   //false  -if you set false,pages will not render at layout
+                        }) 
+                    </script>
+                ]
+
+
+    //keep sidebar,footer,navbar in this directory

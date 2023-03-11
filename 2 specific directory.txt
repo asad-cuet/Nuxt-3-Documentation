@@ -1,0 +1,44 @@
+-Nuxt has specific direction, you must follow them.
+-all directory is case-sensitive
+
+
+1. For pages: [keep all  vue files which have specific route. the filename will be generated as route]
+=============
+/pages/             
+
+2.For components:  [keep all reusable component here]
+================
+/components/
+            Home/
+                Welcome.vue   [will be available as <HomeWelcome/> (pascal case) 
+                              or, <homewelcome/>  
+                              or, <home-welcome/> (kabab case) 
+                              ]
+                or,
+                HomeWelcome.vue   [will be available as <HomeWelcome/> ]
+
+            Product.vue       [will be available as <Product/> ]
+            Others.vue        [to use as lazy:  <LazyOthers/> ]
+
+3.For static files: [all css,js,image files will be here]
+===================
+/assets/
+
+4.For layouts:
+==============
+/layouts/
+    default.vue  [nuxt will find this layout file, automatically]
+
+    
+
+
+5. For static server:
+====================
+/server/
+         api/
+
+
+6.composables:
+==============
+/composables/
+ 

@@ -1,0 +1,16 @@
+show component from script:
+==========================
+<template>
+
+    <component :is="MyCompoent"
+
+</template>
+
+<script setup>
+const MyCompoent=resolveComponent("ComponentName")  // resolveComponent find the component named ComponentName
+
+</script>
+
+
+slot:
+=====

@@ -1,0 +1,15 @@
+this file's data is globally available throughout the app
+inside export:
+==============
+    css:['/assets/css/..']
+    app:{
+        head:{
+            title:'Nuxt Dojo',
+            meta:[
+                { name: 'description', content: "Everything abount Nuxt 3" }
+            ],
+            link:[
+                { rel:'stylesheet', href: "https://fonts.googleapis.com/css?family=Tangerine" }
+            ]
+        }
+    },

@@ -1,0 +1,9 @@
+app:
+====
+    -if you delete app.vue, nuxt will see only pages/index.vue at '/' route
+    -if you keep app.vue also pages/, app will render throuh app.vue
+    -If you want to use app.vue as layout, you need to use <NuxtPage/> to show content from pages/
+
+pages/:
+=======
+    -
