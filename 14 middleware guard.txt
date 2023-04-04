@@ -1,0 +1,98 @@
+When a user logged in, he shouldn't allow to visit login page, regidtration page.
+here, we will make a guard by middleware
+
+
+3 kinds of middleware:
+======================
+    1. Anynomous or inline: defined directly in the page
+
+    2. Name route middleware: structure: kabab-case
+
+    3. global route:    structure: kabab-case
+
+1. Anynomous or inline::
+========================
+
+
+    <script>
+        definePageMeta({
+            middleware: ()=> {
+                console.log('i am a middleware')
+                // if you return false; this page won't load
+            }
+        })
+    </script>
+
+    or,
+
+    <script>
+       
+        definePageMeta({
+            middleware: ()=> {
+                const auth=useAuth()             //from 10
+                return auth.value.isAuthenticated
+            }
+        })
+    </script>
+
+
+2. Name route middleware:
+=========================
+    middleware/auth.js:
+    --------------------
+
+        export default defineNuxtRouteMiddleware( () => {
+            
+            //code here
+
+            const auth=useAuth()          //from 10      
+            return auth.value.isAuthenticated
+
+        } )
+
+
+    using in script:
+    ----------------
+        <script>
+            definePageMeta({
+                middleware:['auth','other..']
+            })
+        </script>
+
+3. global route:
+================
+
+    middleware/page-visit.global.js:
+    --------------------------
+
+        export default defineNuxtRouteMiddleware( () => {
+        
+        //code here
+
+        } )
+
+    making a page visit middleware:
+    -------------------------------
+
+    composables/states.js:
+    ----------------------
+        export const usePageVistitCount=()=>useState(()=>0);
+
+    middleware/page-visit-counter.global.js:
+    ----------------------------------------
+
+            export default defineNuxtRouteMiddleware( () => {
+            
+                const pageVistitCount=usePageVisitCount();
+
+                pageVistitCount.value++;
+
+            } )
+
+    in a page:
+    ----------
+        template:
+            {{pageVistitCount}}
+
+        script:
+            const pageVistitCount=usePageVisitCount();

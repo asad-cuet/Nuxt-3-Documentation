@@ -1,0 +1,5 @@
+script:
+======
+    const url='....'
+
+    const response=useFetch(url)

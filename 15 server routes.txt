@@ -1,0 +1,35 @@
+directory:
+=========
+server/
+      api/products.js
+      routes
+      middleware
+      ....
+
+why this:
+=========
+    -this directory is used to register API & server handlers with HMR  support
+
+
+structure:
+==========
+     export default defineEventHandler()
+
+
+
+Example:
+=========
+    products.js:    //defining a api
+    -------------
+
+    export default defineEventHandler(()=>{
+        return { name: "Mobile" }
+    })
+
+
+    using in script:
+    ----------------
+
+    const {data}=useFetch('api/products');
+
+    console.log(data.value)

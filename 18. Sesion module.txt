@@ -1,0 +1,39 @@
+reference:
+https://nuxt.com/modules/session
+
+
+Quick start
+
+Install the package:
+
+    npm i -D @sidebase/nuxt-session
+
+Add the package to your nuxt.config.ts:
+
+    export default defineNuxtConfig({
+      modules: ['@sidebase/nuxt-session'],
+    })
+
+    Done! Each client will now have a unique session you can access on the server- and client side:
+client-side (from any .vue file):
+
+        const { session, refresh, update, reset } = await useSession()
+
+        // Reactive session object that updates after methods calls below
+        session.value
+
+        // Refresh the session
+        await refresh()
+
+        // Update the session with arbitrary data
+        await update({ test: 123 })
+
+        // Get a new session, all data will be lost, the session id and creation time will change
+        await reset()
+
+server-side (e.g., from server/api files):
+
+        import { eventHandler } from 'h3'
+
+        // Return all session data to the frontend
+        export default eventHandler(event => event.context.session)

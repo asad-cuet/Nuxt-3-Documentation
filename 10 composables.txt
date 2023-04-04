@@ -1,3 +1,9 @@
+Basic:
+======
+    -composables data can be access from anywhere of the project
+    -Also the data kept alive. If you modify value, it will be held and can be read from anywhere
+    -using this you can handle login logitsystem
+
 structure:
 ==========
 filename.js:   [filename could be anything]
@@ -13,8 +19,40 @@ call from script:
     const compData= compName()
     console.log(compData.value)
 
-    pushing some data:
+    pushing some data: // value can be changed
     ------------------
     compData.value.push({
         name:'....'
     })
+
+
+handling response of sign in composable: [see 11]
+========================================
+
+    export const useAuth=()=> useState(()=>   
+    ({
+        isAuthenticated:false //initial vaue is false
+    })
+    )
+
+
+    call from script:
+    ----------------
+        const auth= useAuth()
+
+        function logout()
+        {
+            auth.value.isAuthenticated=false;
+        }
+
+
+    showing in template:
+    --------------------
+
+    <div v-if="auth.isAuthenticated">
+        <button @click="logout"> Logout </button>    
+    </div>
+
+    <div v-else>
+        <NuxtLink to=""  v-else> Login </NuxtLink>    
+    </div>

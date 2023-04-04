@@ -20,9 +20,9 @@
             Product.vue       [will be available as <Product/> ]
             Others.vue        [to use as lazy:  <LazyOthers/> ]
 
-3.For static files: [all css,js,image files will be here]
+3.For static files: [all css,js files will be here]
 ===================
-/assets/
+/assets/                        // <img src="~/assets/your_image.png" />
 
 4.For layouts:
 ==============
@@ -41,4 +41,15 @@
 6.composables:
 ==============
 /composables/
+
+
+
+7.middleware:
+=============
+/middleware/
+            auth.js
+            auth.global.js   //for global
  
+
+ 8.Image/File folder:
+ /public/
