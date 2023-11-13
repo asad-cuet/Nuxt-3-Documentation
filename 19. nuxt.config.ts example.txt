@@ -1,0 +1,37 @@
+// https://nuxt.com/docs/api/configuration/nuxt-config
+export default defineNuxtConfig({
+  devtools: { enabled: true },
+  css: [
+    `assets/css/main.css?url`,   // int public/ root
+    `assets/css/custom.css?url`,
+    `assets/css/rtl.css?url`,
+  ],
+  app:{
+    head:{
+        title:'Selfcoder.Net',
+        meta:[
+            { charset:"utf-8" },
+            { name: 'description', content: "Starter Kit" },
+            { name:"viewport", content:"width=device-width, initial-scale=1, shrink-to-fit=no" },
+            { name: 'description', content: "Starter Kit" },
+        ],
+        link:[
+            {  href:"https://fonts.googleapis.com", rel:"preconnect"},
+            {  href:"https://fonts.googleapis.com", rel:"preconnect"},
+            {  href:"https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap", rel:"stylesheet"},
+            { href: "img/favicon.svg", type: "image/x-icon", rel: "icon" },
+            {  href:"https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css", rel:"stylesheet"},
+            {  href:"https://cdnjs.cloudflare.com/ajax/libs/lightcase/2.5.0/css/lightcase.min.css", rel:"stylesheet", integrity:"sha512-UMjmYgC4H9o2+uhTFLYJVdzXfRonz73J/rZ0QMHXTRrpZQ1EE7irVZedfTuIiR4IEMDao3k9YMZCgQiaPi0paA==", crossorigin:"anonymous", referrerpolicy:"no-referrer"},
+
+        ],
+        script:[
+            { src:"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js", integrity:"sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==", crossorigin:"anonymous",referrerpolicy:"no-referrer"},
+            { src:"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js", integrity:"sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N", crossorigin:"anonymous"},
+            { src:"https://kit.fontawesome.com/1c5d30a313.js", crossorigin:"anonymous" },
+            { src:"https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" },
+            { src:"https://cdnjs.cloudflare.com/ajax/libs/lightcase/2.5.0/js/lightcase.min.js",integrity:"sha512-i+A2/k3mB4TtIRp6fyk8Q+xzJqKusi0bvFgCIfDtdJT1tDEMqYvKo60q3bvp6LzGIeS6BahqN4AklwwxbdSaog==", crossorigin:"anonymous", referrerpolicy:"no-referrer" },
+            { src:"assets/js/custom.js?url" }
+        ]
+    }
+}
+})

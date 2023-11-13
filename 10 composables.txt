@@ -1,3 +1,5 @@
+Default: https://nuxt.com/docs/api/composables/use-route
+
 Basic:
 ======
     -composables data can be access from anywhere of the project

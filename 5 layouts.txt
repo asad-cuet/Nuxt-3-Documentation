@@ -6,13 +6,10 @@ Directory:
 
 
 <template>
-<div>
-    -----------------
-    -----------------
-    <slot></slot>
-
-</div>
-</templete>
+    <div>
+      <slot />
+    </div>
+</template>
 
 
 
